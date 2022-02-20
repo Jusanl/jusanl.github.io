@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <title>Saiga tatarica</title>
+   <link rel="stylesheet" href="css//page2.css">
+   <link rel="icon" href="icon.jpeg" type="images/x-icon">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.2/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+   <style>
+    body {
+      background-color: bisque;
+      white-space: normal;
+    }
+    .wrapper{
+     display:grid;
+     grid-template-columns: 20% 80%;
+     grid-column-gap:0em;
+     grid-row-gap:1em;
+    }
+    .wrapper > div{
+    background:bisque;
+    padding:1em;
+    white-space: normal;
+    }
+    #train {
+    position: relative;
+    cursor: pointer;
+  }
+   </style>
+ </head>
+ <body>
+   <nav>
+     <ul>
+       <li><a href="index.html">Back</a></li>
+     </ul>
+   </nav>
+   <h1 align="center">Scientific Classification</h1>
+  <table style="width:100%">
+   <tr>
+    <th>Kingdom:</th>
+    <th>Animalia</th>
+   </tr>
+   <tr>
+    <th>Phylum:</th>
+    <th>Chordata</th>
+   </tr>
+   <tr>
+    <th>Class:</th>
+    <th>Mammalia</th>
+   </tr>
+   <tr>
+    <th>Order:</th>
+    <th>Artiodactyla</th>
+   </tr>
+   <tr>
+    <th>Family:</th>
+    <th>Bovidae</th>
+   </tr>
+   <tr>
+    <th>Subfamily:</th>
+    <th>Antilopinae</th>
+   </tr>
+   <tr>
+    <th>Genus:</th>
+    <th>Saiga</th>
+   </tr>
+   <tr>
+    <th>Species Name:</th>
+    <th>Saiga Tatarica</th>
+   </tr>
+  </table>
+  <div class="wrapper">
+    <div>
+    <img id="train" src="sq.jpeg">
+    </div>
+  <div>
+  <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="SW.jpeg" alt="Smiley" width="32" height="32">
+</div>
+</div>
+
+
+  <p><img src="234.jpg" width="150" height="150" style="vertical-align:middle;margin:50px 50px">Saiga Antelope Horns. Ringed at the bottom.</p>
+  <p><img src="345.jpg" width="150" height="150" style="vertical-align:middle;margin:0px 50px">Saiga Antelope Skull</p>
+  <p><img src="456.jpg" width="150" height="150" style="vertical-align:middle;margin:50px 50px">They mainly prefer open dry steppes, semi-desert grasslands where they are able to run quickly away from predators.</p>
+  <p> •  The sense of hearing of these animals is <mark>poor</mark>. However, they have a very <mark>keen sense of vision</mark> that helps them see and locate danger over long distances of up to a kilometer. Normally, a thirsty Saiga would visit water holes <mark>twice</mark> a day.</p>
+  <p> •  They are able to eat several species of plants, including some that are <mark>poisonous</mark> to other animals.</p>
+  <p> •  The saiga antelopes can easily cover long distances in herds and even swim across rivers, unlike other antelopes. This is a big defensive adaptation.</p>
+  <p> •  Saiga is a very fast animal. It can run up to 80 per hour, especially when it is trying to escape from the predators.</p>
+
+  <script>
+function bigImg(x) {
+  x.style.height = "130px";
+  x.style.width = "130px";
+}
+
+function normalImg(x) {
+  x.style.height = "64px";
+  x.style.width = "64px";
+}
+train.onclick = function() {
+     let start = Date.now();
+
+     let timer = setInterval(function() {
+       let timePassed = Date.now() - start;
+
+       train.style.left = timePassed / 5 + 'px';
+
+       if (timePassed > 2000) clearInterval(timer);
+
+     }, 20);
+   }
+</script>
+ </body>
+</html>

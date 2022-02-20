@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <title>Saiga tatarica</title>
+   <link rel="stylesheet" href="css//page2.css">
+   <link rel="icon" href="icon.jpeg" type="images/x-icon">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <style>
+   .wrapper{
+    display:grid;
+    grid-template-columns: 60% 40%;
+    grid-column-gap:0em;
+    grid-row-gap:1em;
+   }
+   .wrapper > div{
+   background:white;
+   padding:1em;
+   white-space: normal;
+   }
+   .wrapp{
+     display:grid;
+     grid-template-columns: 50% 50%;
+     grid-column-gap:0em;
+     grid-row-gap:1em;
+   }
+   .wrapp  > div{
+     background:bisque;
+     padding:1em;
+     white-space: normal;
+   }
+   .wrap{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    grid-column-gap:0em;
+    grid-row-gap:1em;
+   }
+   .wrap > div{
+   background:white;
+   padding:1em;
+   white-space: normal;
+   }
+   body {
+   margin: 0;
+   text-align: center;
+   background:bisque;
+ }
+ button:hover {
+background:#d34d43;
+}
+
+ button {
+     background:white;
+ }
+  </style>
+  <body>
+   <nav>
+     <ul>
+       <li><a href="index.html">Back</a></li>
+     </ul>
+   </nav>
+   <p id="demo"></p>
+   <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+   <button onclick="document.getElementById('demo').innerHTML=person.name()">Back</button>
+   <p>Your name <input type="text"> consists of <span>0</span> characters!</p>
+
+
+
+   <div class="wrapper">
+    <div class="gallery">
+      <a target="_blank" href="16.jpeg">
+       <img src="16.jpeg" width="500" height="700">
+      </a>
+    </div>
+    <div id="left">
+      <h1>How many saiga antelopes are there in the world?</h2>
+       <p>It is hard to say just how many saiga antelope are left in the world, but experts assume the numbers to be around 50,000. Poaching and the illegal trade for saiga horn, which is a crucial component in traditional Chinese medicine, has pushed the saiga populations to the verge of extinction. In fact, there are no saiga antelope left in China, and the population around the rest of Central Asia and the Eurasian steppe is critically endangered. A mass die out of the Saiga tatarica species happened a few years ago that impacted their population negatively.</p>
+    </div>
+   </div>
+   <div class="wrap">
+     <h2 align="center">How long does a saiga antelope live?</h2>
+     <p  align="center">Saiga antelope are known to live for only 10 to 12 years. The Saiga tatarica species is very prone to bacterial disease, which is why mass die-outs have occurred and have impacted the saiga population negatively throughout the years.</p>
+   </div>
+   <div class="wrap">
+     <h3  align="center">What is their conservation status?</h3>
+    <p  align="center">Saiga antelope is listed as a critically endangered species in the IUCN red list. Poaching and illegal trading have pushed the saiga population to the verge of extinction. Not to mention the international trade for saiga horn is a big reason that their population has been threatened over the centuries. These horns are valuable as they are used in traditional Chinese medicine. This has caused a mass decrease in the saiga antelope population. However, in recent years, saiga conservation methods have been introduced by wildlife groups.</p>
+  </div>
+   <div class="wrapper">
+    <div>Currently, only the Almaty Zoo and Askania-Nova keep saigas. Cologne Zoological Garden and San Diego Zoo.</div>
+    <div> Pleistocene Park in northern Siberia plans to introduce the species.</div>
+   </div>
+   <div class="container">
+    <ul class="alternate">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+   <div class ="wrapp">
+      <div>
+           <video width="320" height="240" controls>
+             <source src="Strange Prehistoric Creature_ Saiga Antelope _ Caucasus.mp4" type="video/mp4">
+             <source src="Strange Prehistoric Creature_ Saiga Antelope _ Caucasus.ogg" type="video/ogg">
+           </video>
+       </div>
+       <div>
+         <i class="fa fa-spinner fa-spin">watch</i>
+         <i class="fa fa-refresh fa-spin">the</i>
+         <i class="fa fa-cog fa-spin">video</i>
+       </div>
+
+   </div>
+
+<script>
+const person = {
+  firstName: "Aliya",
+  lastName: "Abash",
+  id: 212066,
+};
+person.name = function() {
+  return this.firstName + " " + this.lastName;
+};
+
+document.getElementById("demo").innerHTML =
+"My name is " + person.name();
+
+i = 0;
+$(document).ready(function(){
+  $("input").keypress(function(){
+    $("span").text(i += 1);
+  });
+});
+</script>
+  </body>
+</html>

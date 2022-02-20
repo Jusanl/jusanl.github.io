@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saiga tatarica</title>
+<link rel="stylesheet" href="css//page2.css">
+<link rel="icon" href="icon.jpeg" type="images/x-icon">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* Full height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Images used */
+.img1 { background-image: url("s1.jpg"); }
+.img2 { background-image: url("s2.png"); }
+.img3 { background-image: url("q1.jpg"); }
+.img4 { background-image: url("q2.jpg"); }
+.img5 { background-image: url("sd.jpeg"); }
+.img6 { background-image: url("s3.jpg"); }
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  font-size: 80px;
+  border: 10px solid #f1f1f1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Back</a></li>
+    </ul>
+  </nav>
+<div class="bg-image img1"></div>
+<div class="bg-image img2"></div>
+<div class="bg-image img3"></div>
+<div class="bg-image img4"></div>
+<div class="bg-image img5"></div>
+<div class="bg-image img6"></div>
+
+<div class="bg-text">SAIGA</div>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">Antiquity</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">From the 14th century to the 20th century</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">The present population decline</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <p>During the last glacial period, the saigas ranged from the British Isles through Central Asia and the Bering Strait into Alaska and Canada's Yukon and Northwest Territories. By the classical age, they were apparently considered a characteristic animal of Scythia, judging from the historian Strabo's description of an animal called the kolos that was "between the deer and ram in size" and was wrongly believed to drink through its nose.</p>
+ <p>Considerable evidence shows the importance of the antelope to Andronovo culture settlements. Illustrations of saiga antelopes can be found among the cave paintings that were dated back to seventh to fifth century BC. Moreover, saiga bones were found among the remains of other wild animals near the human settlements.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <p>The fragmented information shows an abundance of saigas on the territory of modern Kazakhstan in the 14th-16th centuries. The migratory routes ranged throughout the country's area, especially the region between the Volga and Ural Rivers was heavily populated. The population's size remained high until the second half of the 19th century, when excessive horn export began. The high price and demand for horns drove radical hunting. The number of animals decreased in all regions and the migratory routes shifted southward.</p>
+<p>After a rapid decline, they were nearly completely exterminated in the 1920s, but they were able to recover. By 1950, two million of them were found in the steppes of the USSR. Their population fell drastically following the collapse of the USSR due to uncontrolled hunting and demand for horns in Chinese medicine. At one point, some conservation groups, such as the World Wildlife Fund, encouraged the hunting of this species, as its horn was presented as an alternative to that of a rhinoceros.</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <p>Today, the populations have again shrunk enormously – as much as 95% in 15 years. The saiga is classified as critically endangered by the IUCN. An estimated total number of 50,000 saigas survives today in Kalmykia, three areas of Kazakhstan, and in two isolated areas of Mongolia. Another small population in the Pre-Caspian region of Russia remains under extreme threat.</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>
